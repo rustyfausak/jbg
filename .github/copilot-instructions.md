@@ -33,6 +33,9 @@ This is a React + Vite website for "Jess's Brain Group," a peer-driven community
 - **Code Indentation**: 2 spaces, no tabs
 
 ### Navigation & UI Patterns
+- **React Router v6**: BrowserRouter with client-side routing (e.g. `/`, `/about`, and `*` for 404)
+- **Navigation constants**: Centralized in `/src/constants/navigation.js` for DRY principle
+- **Layout pattern**: `layouts/Standard.jsx` defines the standard layout (Header + Footer) for page content
 - **Mobile menu**: Uses Headless UI Dialog with slide-in panel pattern
 - **State management**: `useState` for simple component state (no external state library)
 - **Accessibility**: Proper ARIA labels, screen reader text with `sr-only` class

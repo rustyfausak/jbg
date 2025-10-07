@@ -2,15 +2,9 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { navigation } from '../constants/navigation';
 import logoWhite from './../assets/logo-white.svg';
 import iconWhite from './../assets/icon-white.svg';
-
-const navigation = [
-  { name: 'Meet Jess', href: '/about' },
-  { name: 'Join Us', href: '/' },
-  { name: 'Resources', href: '/' },
-  { name: 'Donate', href: '/' },
-]
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
