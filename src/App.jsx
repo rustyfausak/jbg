@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/Header';
-import bgDance from './assets/bg-friendly.jpg';
+import bgDance from './assets/bg-friendly-lg.jpg';
 
 export default function App() {
   return (
