@@ -30,6 +30,7 @@ This is a React + Vite website for "Jess's Brain Group," a peer-driven community
 - **Responsive design**: Mobile-first with `lg:` breakpoints
 - **Color scheme**: Primary stone/gray palette with sky-600 accents
 - **Typography**: Font-serif for headings, default sans for body text
+- **Code Indentation**: 2 spaces, no tabs
 
 ### Navigation & UI Patterns
 - **Mobile menu**: Uses Headless UI Dialog with slide-in panel pattern
