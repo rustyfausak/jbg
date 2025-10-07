@@ -1,9 +1,9 @@
-import Layout from './Layout';
+import StandardLayout from './layouts/Standard';
 import jessPhoto from '../assets/jess-headshot.jpg';
 
 export default function About() {
   return (
-    <Layout>
+    <StandardLayout>
       <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
@@ -81,6 +81,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </Layout>
+    </StandardLayout>
   );
 }
