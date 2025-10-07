@@ -1,11 +1,11 @@
 import './App.css';
 import Header from './components/Header';
-import bgDance from './assets/bg-friendly-lg.jpg';
+import bgImage from './assets/bg-friendly-lg.jpg';
 
 export default function App() {
   return (
     <>
-      <div className="antialiased min-h-dvh bg-cover bg-center" style={{ backgroundImage: `url(${bgDance})` }}>
+      <div className="antialiased min-h-dvh bg-cover bg-center" style={{ backgroundImage: `url(${bgImage})` }}>
         <div className="backdrop-grayscale-25 backdrop-brightness-50 min-h-dvh p-5 flex flex-col justify-end">
           <Header />
           <main className="font-serif text-shadow-lg">
