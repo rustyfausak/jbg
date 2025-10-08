@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
+import Join from './components/Join';
+import Donate from './components/Donate';
+import Resources from './components/Resources';
 import NotFound from './components/NotFound';
 
 export default function App() {
@@ -12,6 +15,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/join" element={<Join />} />
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/resources" element={<Resources />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

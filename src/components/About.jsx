@@ -1,4 +1,5 @@
 import StandardLayout from './layouts/Standard';
+import Banner from './Banner';
 import imgJessHeadshot from '../assets/jess-headshot.jpg';
 import imgJessCooking from '../assets/jess-cooking.jpg';
 import imgJessWedding from '../assets/jess-wedding.jpg';
@@ -52,16 +53,10 @@ function ImageContainer({ img }) {
 export default function About() {
   return (
     <StandardLayout>
-      <div className="bg-stone-900 mt-22">
-        <div className="max-w-5xl mx-auto py-10 px-6">
-          <h2 className="text-4xl sm:text-6xl font-serif text-shadow-lg">
-            Meet Jess
-          </h2>
-          <p className="text-lg italic leading-6 text-stone-400">
-            Founder and heart of Jess's Brain Group
-          </p>
-        </div>
-      </div>
+      <Banner
+        title="Meet Jess"
+        subtitle="Founder and heart of Jess's Brain Group."
+      />
 
       <AboutSection
         title="Her Journey"
