@@ -1,5 +1,5 @@
 import StandardLayout from './layouts/Standard';
-import bgImage from '../assets/bg-friendly-lg-lq.jpg';
+import bgImage from '../assets/bg-friendly-lg.jpg';
 
 export default function Home() {
   return (

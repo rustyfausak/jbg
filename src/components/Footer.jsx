@@ -4,14 +4,14 @@ import { socialMedia } from '../constants/socialMedia';
 
 export default function Footer() {
   return (
-    <footer className="p-6 text-sm text-center text-stone-400 flex flex-col gap-6 items-center justify-center">
+    <footer className="pt-20 p-6 text-sm text-center text-stone-400 flex flex-col gap-6 items-center justify-center">
       <div>
         <nav className="flex justify-center gap-6">
           {navigation.map((item) => (
             <Link
               key={item.name}
               to={item.href}
-              className="hover:text-stone-300"
+              className="hover:text-stone-300 font-semibold"
             >
               {item.name}
             </Link>
