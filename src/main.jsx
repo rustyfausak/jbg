@@ -6,11 +6,13 @@ import App from './App.jsx'
 // Handle GitHub Pages routing for 404 redirects
 if (window.location.search.includes('/?/')) {
   const searchParams = new URLSearchParams(window.location.search);
-  const path = searchParams.get('/') || '';
-  const decodedPath = path.replace(/~and~/g, '&');
-  
-  if (path) {
-    window.history.replaceState(null, null, '/' + decodedPath + window.location.hash);
+  const redirectPath = searchParams.get('/') || '';
+
+  if (redirectPath) {
+    // For subdirectory deployment, preserve the base path
+    const basePath = import.meta.env.MODE === 'development' ? '' : '/jbg';
+    const fullPath = basePath + '/' + redirectPath.replace(/~and~/g, '&');
+    window.history.replaceState(null, null, fullPath + window.location.hash);
   }
 }
 
