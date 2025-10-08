@@ -52,7 +52,7 @@ function ImageContainer({ img }) {
 export default function About() {
   return (
     <StandardLayout>
-      <div className="bg-stone-900 mt-20">
+      <div className="bg-stone-900 mt-22">
         <div className="max-w-5xl mx-auto py-10 px-6">
           <h2 className="text-4xl sm:text-6xl font-serif text-shadow-lg">
             Meet Jess
