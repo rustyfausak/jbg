@@ -1,7 +1,8 @@
 import StandardLayout from './layouts/Standard';
 import bgImage from '../assets/bg-friendly-lg.jpg';
-import { Link } from 'react-router-dom'
-import { ChatBubbleLeftRightIcon, DocumentTextIcon, UsersIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom';
+import { ChatBubbleLeftRightIcon, DocumentTextIcon, UsersIcon } from '@heroicons/react/24/outline';
+import imgJessSuccess from '../assets/jess-success.jpg';
 
 function StepSection({ icon, title, description, step, href }) {
   const content = (
@@ -19,15 +20,51 @@ function StepSection({ icon, title, description, step, href }) {
 
   if (href) {
     return (
-      <Link to={href} className="flex-1 flex flex-col gap-3 border border-stone-600 rounded-lg p-6 hover:bg-stone-800/50 transition-colors">
+      <Link to={href} className="bg-stone-800 flex-1 flex flex-col gap-3 border border-stone-700 rounded-lg p-6 hover:bg-stone-700/50 transition-colors">
         {content}
       </Link>
     );
   }
 
   return (
-    <div className="flex-1 flex flex-col gap-3 border border-stone-600 rounded-lg p-6">
+    <div className="bg-stone-800 flex-1 flex flex-col gap-3 border border-stone-700 rounded-lg p-6">
       {content}
+    </div>
+  );
+}
+
+function SuccessStory({ quote, author, img, rank = "Peer Supporter" }) {
+  return (
+    <div className="flex flex-col md:flex-row gap-6 p-6">
+      <div className="hidden md:block">
+        <div className="w-50 aspect-square overflow-hidden rounded-lg shadow-lg">
+          <img
+            alt={author}
+            src={img}
+            className="h-full w-full object-cover object-center"
+            />
+        </div>
+      </div>
+      <div className="flex flex-col gap-6 self-center">
+        <div className="text-stone-300 font-semibold text-xl text-pretty">"{quote}"</div>
+        <div className="hidden md:block">
+          <div className="font-semibold">{author}</div>
+          <div className="block text-stone-400 text-sm italic">{rank}</div>
+        </div>
+      </div>
+      <div className="flex gap-3 items-center">
+        <div className="md:hidden aspect-square w-18 overflow-hidden rounded-lg shadow-lg">
+          <img
+            alt={author}
+            src={img}
+            className="h-full w-full object-cover object-center"
+            />
+        </div>
+        <div className="md:hidden">
+          <div className="font-semibold">{author}</div>
+          <div className="block text-stone-400 text-sm italic">{rank}</div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -94,6 +131,22 @@ export default function Home() {
           <p className="-mt-3 text-xl font-thin text-stone-300">
             Hear from our members about how peer support has transformed their recovery journey.
           </p>
+          <SuccessStory
+            quote="My peers and support groups have been a lifeline. Knowing other people who truly understand what I'm going through has made all the difference."
+            author="Jess F."
+            img={imgJessSuccess}
+            rank="Founder, Brain Injury Survivor"
+          />
+          <SuccessStory
+            quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, placerat erat at, efficitur quam."
+            author="Jess F."
+            img={imgJessSuccess}
+          />
+          <SuccessStory
+            quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, placerat erat at, efficitur quam."
+            author="Jess F."
+            img={imgJessSuccess}
+          />
         </div>
       </div>
     </StandardLayout>

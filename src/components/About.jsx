@@ -3,9 +3,11 @@ import Banner from './Banner';
 import imgJessHeadshot from '../assets/jess-headshot.jpg';
 import imgJessCooking from '../assets/jess-cooking.jpg';
 import imgJessWedding from '../assets/jess-wedding.jpg';
-import imgGumby from '../assets/gumby.jpg';
+import imgJessGumby from '../assets/jess-gumby.jpg';
 import imgJessPatagonia from '../assets/jess-patagonia.jpg';
 import imgJessMexico from '../assets/jess-mexico.jpg';
+import imgJessRecovery from '../assets/jess-recovery.jpg';
+import imgJessPigs from '../assets/jess-pigs.jpg';
 
 function AboutSection({ title, children, img, showSeparator = true }) {
   return (
@@ -43,9 +45,9 @@ function ImageContainer({ img }) {
       <img
         alt={img.alt}
         src={img.src}
-        className={"h-full w-full object-cover " + (img.position ? img.position : "object-center")}
+        className={"z-50 h-full w-full object-cover " + (img.position ? img.position : "object-center")}
         />
-        <p className="absolute backdrop-blur-xs backdrop-brightness-60 px-2 py-1 rounded text-shadow-lg bottom-2 left-2 text-sm text-stone-300">{img.alt}</p>
+        <p className="absolute z-100 backdrop-blur-xs backdrop-brightness-60 px-2 py-1 rounded text-shadow-lg bottom-2 left-2 text-sm text-stone-300">{img.alt}</p>
     </div>
   );
 }
@@ -64,7 +66,7 @@ export default function About() {
       >
         <p>
           In December of 2015, Jess experienced a life-altering event when she suffered
-          a traumatic brain injury due to a ruptured aneurysm.
+          a brain injury due to a ruptured aneurysm.
         </p>
         <p>
           She underwent emergency brain surgery to place a clip on the aneurysm. After
@@ -95,10 +97,12 @@ export default function About() {
           Life Since Brain Injury
         </h3>
         <div className="gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+          <ImageContainer img={{ alt: "Jess in recovery", src: imgJessRecovery }} />
+          <ImageContainer img={{ alt: "Jess with a shaved head from brain surgery", src: imgJessPigs }} />
           <ImageContainer img={{ alt: "Jess with her father at her wedding", src: imgJessWedding }} />
           <ImageContainer img={{ alt: "Jess with her husband in Patagonia", src: imgJessPatagonia, position: "object-[40%]" }} />
           <ImageContainer img={{ alt: "Jess with her sister in Mexico", src: imgJessMexico, position: "object-[10%]" }} />
-          <ImageContainer img={{ alt: "Jess's dog Gumby", src: imgGumby }} />
+          <ImageContainer img={{ alt: "Jess with her dog Gumby", src: imgJessGumby }} />
         </div>
       </div>
     </StandardLayout>
