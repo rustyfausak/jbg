@@ -1,4 +1,5 @@
 import StandardLayout from './layouts/Standard';
+import ContentBlock from './ContentBlock';
 import bgImage from '../assets/bg-friendly-lg.jpg';
 import { Link } from 'react-router-dom';
 import { ChatBubbleLeftRightIcon, DocumentTextIcon, UsersIcon } from '@heroicons/react/24/outline';
@@ -89,66 +90,59 @@ export default function Home() {
         </div>
       </div>
 
-      <a name="how-it-works" id="how-it-works"></a>
-      <div className="px-6 py-22 min-h-100 bg-stone-900">
-        <div className="max-w-5xl mx-auto flex flex-col gap-6 items-start">
-          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-pretty">
-            Get Connected With Your Peer
-          </h2>
-          <p className="-mt-3 text-xl font-thin text-stone-300">
-            Follow these simple steps to get started:
-          </p>
-          <div className="flex gap-6 md:flex-row flex-col items-stretch w-full">
-            <StepSection
-              icon={<DocumentTextIcon aria-hidden="true" className="size-5" />}
-              href="/join"
-              step="1"
-              title="Sign Up"
-              description="Fill out our quick registration form to let us know a bit about you."
-            />
-            <StepSection
-              icon={<UsersIcon aria-hidden="true" className="size-5" />}
-              step="2"
-              title="We Connect You"
-              description="We'll match you with a peer who understands your journey."
-            />
-            <StepSection
-              icon={<ChatBubbleLeftRightIcon aria-hidden="true" className="size-5" />}
-              step="3"
-              title="Contact Your Peer"
-              description="Start chatting and building a supportive relationship."
-            />
-          </div>
+      <ContentBlock
+        title="Get Connected With Your Peer"
+        subtitle="Follow these simple steps to get started:"
+        id="how-it-works"
+        wrapperClass="bg-stone-900"
+      >
+        <div className="flex gap-6 md:flex-row flex-col items-stretch w-full">
+          <StepSection
+            icon={<DocumentTextIcon aria-hidden="true" className="size-5" />}
+            href="/join"
+            step="1"
+            title="Sign Up"
+            description="Fill out our quick registration form to let us know a bit about you."
+          />
+          <StepSection
+            icon={<UsersIcon aria-hidden="true" className="size-5" />}
+            step="2"
+            title="We Connect You"
+            description="We'll match you with a peer who understands your journey."
+          />
+          <StepSection
+            icon={<ChatBubbleLeftRightIcon aria-hidden="true" className="size-5" />}
+            step="3"
+            title="Contact Your Peer"
+            description="Start chatting and building a supportive relationship."
+          />
         </div>
-      </div>
+      </ContentBlock>
 
-      <a name="success-stories" id="success-stories"></a>
-      <div className="px-6 py-22 min-h-100">
-        <div className="max-w-5xl mx-auto flex flex-col gap-6 items-start">
-          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-pretty">
-            Success Stories
-          </h2>
-          <p className="-mt-3 text-xl font-thin text-stone-300">
-            Hear from our members about how peer support has transformed their recovery journey.
-          </p>
-          <SuccessStory
-            quote="My peers and support groups have been a lifeline. Knowing other people who truly understand what I'm going through has made all the difference."
-            author="Jess F."
-            img={imgJessSuccess}
-            rank="Founder, Brain Injury Survivor"
-          />
-          <SuccessStory
-            quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, placerat erat at, efficitur quam."
-            author="Jess F."
-            img={imgJessSuccess}
-          />
-          <SuccessStory
-            quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, placerat erat at, efficitur quam."
-            author="Jess F."
-            img={imgJessSuccess}
-          />
-        </div>
-      </div>
+      <ContentBlock
+        title="Success Stories"
+        subtitle="Hear from our members about how peer support has transformed their recovery journey."
+        id="success-stories"
+        wrapperClass=""
+      >
+        <SuccessStory
+          quote="My peers and support groups have been a lifeline. Knowing other people who truly understand what I'm going through has made all the difference."
+          author="Jess F."
+          img={imgJessSuccess}
+          rank="Founder, Brain Injury Survivor"
+        />
+        <SuccessStory
+          quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, placerat erat at, efficitur quam."
+          author="Jess F."
+          img={imgJessSuccess}
+        />
+        <SuccessStory
+          quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, placerat erat at, efficitur quam."
+          author="Jess F."
+          img={imgJessSuccess}
+        />
+      </ContentBlock>
+
     </StandardLayout>
   );
 }
