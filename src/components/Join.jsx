@@ -13,8 +13,7 @@ export default function Join() {
         <div id="iframe-wrapper-1">
           <div className="w-sm md:w-md lg:w-lg" id="iframe-wrapper-2">
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSeBDJbC3X6ppaSdS0IEY4xvaQCDyFuKibncESvVGtmXDqV6Xw/viewform?embedded=true"
-              height="1800"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSe0IKDCec_onaOnkJFCymIv9kZwm8XB1wDVrhp1UvBrgwBWQg/viewform?embedded=true"
               >Loading…</iframe>
           </div>
         </div>

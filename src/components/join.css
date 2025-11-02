@@ -1,12 +1,11 @@
 #iframe-wrapper-1 {
 }
 #iframe-wrapper-2 {
-  height: 2000px;
+  height: 6000px;
   overflow-x: hidden;
 }
 iframe {
   width: 100%; /*to stretch to left and right of the container's max-width*/
   height: 100%; /*to adapt to the width*/
   max-width: 100%; /*this can be anything you wish, to show, as default size*/
-
 }

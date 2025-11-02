@@ -10,7 +10,7 @@ if (window.location.search.includes('/?/')) {
 
   if (redirectPath) {
     // For subdirectory deployment, preserve the base path
-    const basePath = import.meta.env.MODE === 'development' ? '' : '/jbg';
+    const basePath = import.meta.env.MODE === 'development' ? '' : '';
     const fullPath = basePath + '/' + redirectPath.replace(/~and~/g, '&');
     window.history.replaceState(null, null, fullPath + window.location.hash);
   }

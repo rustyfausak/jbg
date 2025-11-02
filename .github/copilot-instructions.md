@@ -1,7 +1,7 @@
-# Copilot Instructions for Jess's Brain Group (JBG)
+# Copilot Instructions for Brains Heal Together (BHT)
 
 ## Project Overview
-This is a React + Vite website for "Jess's Brain Group," a peer-driven community for brain injury survivors. The site uses modern React 19 with Tailwind CSS v4 and Headless UI components.
+This is a React + Vite website for "Brains Heal Together", a peer-driven community for brain injury survivors. The site uses modern React 19 with Tailwind CSS v4 and Headless UI components.
 
 ## Tech Stack & Key Dependencies
 - **React 19** with Vite 7 (ES modules, JSX)
@@ -50,14 +50,13 @@ This is a React + Vite website for "Jess's Brain Group," a peer-driven community
 - **Preview**: `npm run preview` (preview production build)
 
 ### Build Configuration
-- **Base path**: Configured for GitHub Pages deployment (`base: '/jbg/'` in vite.config.js)
+- **Base path**: Configured for GitHub Pages deployment
 - **Plugins**: React + Tailwind CSS via Vite plugins
 - **Target**: Modern browsers, ES2020
 
 ### Deployment
 - **GitHub Pages**: Automated via GitHub Actions workflow
 - **Build artifacts**: Static files in `/dist/` directory
-- **Domain**: Served from `/jbg/` subdirectory
 
 ## Code Quality & Linting
 - **ESLint config**: Uses new flat config format (eslint.config.js)
@@ -73,7 +72,7 @@ This is a React + Vite website for "Jess's Brain Group," a peer-driven community
 - **Component naming**: Header component function exports as "Example" (should be renamed to "Header")
 
 ## Brand & Content Guidelines
-- **Brand name**: "Jess's Brain Group" or "JBG"
+- **Brand name**: "Brains Heal Together" or "BHT"
 - **Mission**: Peer-driven community for brain injury survivors and loved ones
 - **Tone**: Supportive, inclusive, healing-focused
 - **CTA pattern**: "Find Your Peer →" style with arrow unicode character

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { navigation } from '../constants/navigation';
 import { socialMedia } from '../constants/socialMedia';
+import { brandName } from '../constants/brandName';
 
 export default function Footer() {
   return (
@@ -30,7 +31,7 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      <div className="">&copy; 2025 Jess's Brain Group. All rights reserved.</div>
+      <div className="">&copy; 2025 {brandName}. All rights reserved.</div>
     </footer>
   );
 }

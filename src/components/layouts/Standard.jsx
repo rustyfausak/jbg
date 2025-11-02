@@ -5,7 +5,7 @@ export default function Standard({ children }) {
   return (
     <>
       <Header />
-      {children}
+        {children}
       <Footer />
     </>
   );
