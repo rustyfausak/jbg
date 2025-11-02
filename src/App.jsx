@@ -9,7 +9,7 @@ import NotFound from './components/NotFound';
 
 export default function App() {
   // Get basename from environment
-  const basename = import.meta.env.MODE === 'development' ? '' : '';
+  const basename = import.meta.env.MODE === 'development' ? '' : '/';
 
   return (
     <BrowserRouter basename={basename}>
