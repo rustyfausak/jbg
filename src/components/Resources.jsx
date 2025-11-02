@@ -18,6 +18,11 @@ export default function Resources() {
               https://braininjuryaustin.org/community-resources/
             </a>
           </BasicListItem>
+          <BasicListItem name="Brain Injury Association of America">
+            <a target="_blank" href="https://biausa.org/" className="text-stone-300 underline">
+              https://biausa.org/
+            </a>
+          </BasicListItem>
         </ul>
       </ContentBlock>
     </StandardLayout>
