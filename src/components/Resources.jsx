@@ -13,14 +13,14 @@ export default function Resources() {
 
       <ContentBlock>
         <ul role="list" className="flex flex-col items-stretch w-full gap-3">
-          <BasicListItem name="Brain Injury Association of Austin Community Resources">
-            <a target="_blank" href="https://braininjuryaustin.org/community-resources/" className="text-stone-300 underline">
-              https://braininjuryaustin.org/community-resources/
-            </a>
-          </BasicListItem>
           <BasicListItem name="Brain Injury Association of America">
             <a target="_blank" href="https://biausa.org/" className="text-stone-300 underline">
               https://biausa.org/
+            </a>
+          </BasicListItem>
+          <BasicListItem name="Brain Injury Association of Austin Community Resources">
+            <a target="_blank" href="https://braininjuryaustin.org/community-resources/" className="text-stone-300 underline">
+              https://braininjuryaustin.org/community-resources/
             </a>
           </BasicListItem>
         </ul>
