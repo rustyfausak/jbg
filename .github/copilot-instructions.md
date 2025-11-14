@@ -75,4 +75,4 @@ This is a React + Vite website for "Brains Heal Together", a peer-driven communi
 - **Brand name**: "Brains Heal Together" or "BHT"
 - **Mission**: Peer-driven community for brain injury survivors and loved ones
 - **Tone**: Supportive, inclusive, healing-focused
-- **CTA pattern**: "Find Your Peer →" style with arrow unicode character
+- **CTA pattern**: "Find Your Peer" style
