@@ -8,13 +8,12 @@ import imgJessSuccess from '../assets/jess-success.jpg';
 function StepSection({ icon, title, description, step, href }) {
   const content = (
     <>
-      <div className="flex justify-between">
-        <div className="text-lg font-semibold">
-          {href ? <span className="underline">{title}</span> : title}
-        </div>
-        <div className="flex justify-between items-center">
-          {step && <div className="text-stone-500 text-xl">Step {step}</div>}
-        </div>
+      <div className="flex justify-between items-center">
+        <div className="bg-stone-700 rounded self-start p-3">{icon}</div>
+        {step && <div className="text-stone-500 text-xl">Step {step}</div>}
+      </div>
+      <div className="text-lg font-semibold">
+        {href ? <span className="underline">{title}</span> : title}
       </div>
       <p className="text-stone-300">{description}</p>
     </>
@@ -38,19 +37,21 @@ function StepSection({ icon, title, description, step, href }) {
 export default function Home() {
   return (
     <StandardLayout>
-      <div className="min-h-dvh p-6 flex flex-col justify-center items-center text-center bg-linear-to-t from-teal-900 to-teal-950">
-        <main className="text-pretty text-shadow-md mt-22">
-          <h1 className="text-6xl font-bold tracking-tight md:text-7xl mb-6">Together, We Heal Our Brains</h1>
-          <h2 className="text-2xl mb-5 max-w-4xl text-white opacity-75">We are a peer-driven community for brain injury survivors, caregivers, and their loved ones. We provide connection, encouragement, and shared strength to help every member move forward together. </h2>
-          <div className="flex flex-col xs:flex-row gap-6 justify-center items-center">
-            <Link to="/join" className="rounded bg-sky-500 p-4 text-xl text-white font-semibold hover:bg-sky-500">
-              Find Your Peer
-            </Link>
-            <a href="#how-it-works" className="rounded bg-transparent p-4 text-xl text-white">
-              See How It Works &rarr;
-            </a>
-          </div>
-        </main>
+      <div className="min-h-dvh bg-cover bg-center" style={{ backgroundImage: `url(${bgImage})` }}>
+        <div className="backdrop-grayscale-25 backdrop-brightness-50 min-h-dvh p-6 flex flex-col justify-end">
+          <main className="text-pretty text-shadow-md mt-22">
+            <h1 className="text-5xl font-semibold md:text-6xl max-w-md mb-5">Together, We Heal Our Brains</h1>
+            <div className="text-xl mb-5 max-w-4xl">We are a peer-driven community for brain injury survivors and their loved ones. We provide connection, encouragement, and shared strength to help every member move forward together. </div>
+            <div className="flex flex-col xs:flex-row gap-6">
+              <Link to="/join" className="rounded bg-sky-600 p-4 text-xl text-white hover:bg-sky-500">
+                Find Your Peer →
+              </Link>
+              <a href="#how-it-works" className="rounded bg-transparent p-4 text-xl text-white border border-white hover:bg-white/15">
+                See How It Works
+              </a>
+            </div>
+          </main>
+        </div>
       </div>
 
       <ContentBlock
@@ -61,17 +62,20 @@ export default function Home() {
       >
         <div className="flex gap-6 md:flex-row flex-col items-stretch w-full">
           <StepSection
+            icon={<DocumentTextIcon aria-hidden="true" className="size-5" />}
             href="/join"
             step="1"
             title="Sign Up"
-            description="Fill out our registration form to let us know a bit about you."
+            description="Fill out our quick registration form to let us know a bit about you."
           />
           <StepSection
+            icon={<UsersIcon aria-hidden="true" className="size-5" />}
             step="2"
             title="We Connect You"
             description="We'll match you with a peer who understands your journey."
           />
           <StepSection
+            icon={<ChatBubbleLeftRightIcon aria-hidden="true" className="size-5" />}
             step="3"
             title="Contact Your Peer"
             description="Start chatting and building a supportive relationship."

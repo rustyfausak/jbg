@@ -12,7 +12,10 @@ export default function Resources() {
       />
 
       <ContentBlock>
-        <ul role="list" className="flex flex-col items-stretch w-full gap-3">
+        <h3 className="text-3xl font-thin border-b border-stone-400 w-full text-stone-400">
+          Resources
+        </h3>
+        <ul role="list" className="flex flex-col items-stretch w-full gap-3 mb-3">
           <BasicListItem name="Brain Injury Association of America">
             <a target="_blank" href="https://biausa.org/" className="text-stone-300 underline">
               https://biausa.org/
@@ -24,12 +27,10 @@ export default function Resources() {
             </a>
           </BasicListItem>
         </ul>
-      </ContentBlock>
-      <Banner
-        title="Virtual Support Groups"
-        subtitle="These groups are open to any and all people whose lives have been impacted by brain injury."    
-  <ContentBlock>
-        <ul role="list" className="flex flex-col items-stretch w-full gap-3">
+        <h3 className="text-3xl font-thin border-b border-stone-400 w-full text-stone-400">
+          Meetings
+        </h3>
+        <ul role="list" className="flex flex-col items-stretch w-full gap-3 mb-3">
           <BasicListItem name="Brain Injury Association of Austin">
             <a target="_blank" href="https://braininjuryaustin.org/meetings/" className="text-stone-300 underline">
               https://braininjuryaustin.org/meetings/
@@ -49,7 +50,7 @@ export default function Resources() {
             <a target="_blank" href="https://www.thebeefoundation.org/tbf-brain-aneurysm-support-hive/?blm_aid=23492" className="text-stone-300 underline">
               https://www.thebeefoundation.org/tbf-brain-aneurysm-support-hive/?blm_aid=23492/
             </a>
-          </BasicListItem>  
+          </BasicListItem>
         </ul>
       </ContentBlock>
     </StandardLayout>
