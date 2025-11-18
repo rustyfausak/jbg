@@ -1,0 +1,22 @@
+[
+  {
+    "href": "/join",
+    "text": "Join Us"
+  },
+  {
+    "href": "/faq",
+    "text": "FAQ"
+  },
+  {
+    "href": "/resources",
+    "text": "Resources"
+  },
+  {
+    "href": "/about",
+    "text": "About"
+  },
+  {
+    "href": "/donate",
+    "text": "Donate"
+  }
+]

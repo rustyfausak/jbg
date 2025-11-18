@@ -1,0 +1,20 @@
+---
+layout: basic.njk
+title: Donate
+heading: Donate
+subheading: "We are not currently accepting donations, please consider contributing to one of the following organizations instead:"
+wrap: true
+---
+<ul class="flex flex-col gap-3">
+  {%- for item in donate -%}
+    <li>
+      <div class="font-semibold text-2xl">{{ item.name }}</div>
+      <div class="text-lg text-stone-300">
+        {% if item.link %}
+          <div><a class="underline text-stone-400" href="{{ item.link }}">{{ item.link }}</a></div>
+        {% endif %}
+        {{ item.details }}
+      </div>
+    </li>
+  {%- endfor -%}
+</ul>

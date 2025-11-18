@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Resources",
+    "list": [
+      {
+        "name": "Brain Injury Association of America",
+        "link": "https://biausa.org/",
+        "details": ""
+      },
+      {
+        "name": "Brain Injury Association of Austin Community Resources",
+        "link": "https://braininjuryaustin.org/community-resources/",
+        "details": ""
+      }
+    ]
+  },
+  {
+    "title": "Meetings",
+    "list": [
+      {
+        "name": "Brain Injury Association of Austin",
+        "link": "https://braininjuryaustin.org/meetings/",
+        "details": ""
+      },
+      {
+        "name": "Virtual Tuesday Brainy Bunch",
+        "link": "https://braininjuryconnectionsnw.org/events-programs/virtual-tuesday-brainy-bunch/",
+        "details": ""
+      },
+      {
+        "name": "Peer Party Chat",
+        "link": "https://forms.gle/gBGruxVkfwUfZfwJ9/",
+        "details": ""
+      },
+      {
+        "name": "The Bee Foundation for Brain Aneurysm Prevention",
+        "link": "https://www.thebeefoundation.org/tbf-brain-aneurysm-support-hive/?blm_aid=23492/",
+        "details": ""
+      }
+    ]
+  }
+]

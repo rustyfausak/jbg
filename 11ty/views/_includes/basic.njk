@@ -1,0 +1,138 @@
+---
+layout: base.njk
+heading:
+subheading:
+---
+<header class="absolute inset-x-0 top-0 z-50">
+  <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-10">
+
+    {# Logo #}
+    <div class="flex lg:flex-1">
+      <a href="/" class="-m-1.5 p-1.5">
+        <span class="sr-only">{{ org.name }}</span>
+        <img
+          src="/img/logo-white.png"
+          class="h-10 w-auto"
+          />
+      </a>
+    </div>
+
+    {# Menu Button (less than lg) #}
+    <div class="flex lg:hidden">
+      <button
+        id="open-mobile-menu-button"
+        type="button"
+        onClick="openMobileMenu()"
+        class="cursor-pointer -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-stone-100"
+        >
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true" class="text-4xl">&equiv;</span>
+      </button>
+    </div>
+
+    {# Navigation Links (greater than lg) #}
+    <div class="hidden lg:flex lg:gap-x-12">
+      {%- for nav in navigation -%}
+        <a href="{{ nav.href }}" class="text-2xl font-semibold text-stone-100 hover:text-stone-300">
+          {{ nav.text }}
+        </a>
+      {%- endfor -%}
+    </div>
+  </nav>
+
+  {# Mobile Menu (less than lg) - Closed by default #}
+  <div class="hidden" id="mobile-menu">
+    <div class="fixed inset-0 z-50"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-stone-700 p-6 sm:max-w-sm">
+
+      {# Top Area #}
+      <div class="flex items-center justify-between mb-6">
+
+        {# Logo #}
+        <a href="/" class="-m-1.5 p-1.5">
+          <span class="sr-only">{{ org.name }}</span>
+          <img
+            src="/img/logo-white.png"
+            class="h-8 w-auto"
+            />
+        </a>
+
+        {# Close Button #}
+        <button
+          id="close-mobile-menu-button"
+          type="button"
+          onClick="closeMobileMenu()"
+          class="cursor-pointer -m-2.5 rounded-md p-2.5 text-stone-100"
+          >
+          <span class="sr-only">Close menu</span>
+          <span aria-hidden="true" class="text-2xl">&times;</span>
+        </button>
+      </div>
+
+      {# Bottom Area: Navigation Links #}
+      <div class="border-t-2 border-stone-400 py-6 text-center">
+        {%- for nav in navigation -%}
+          <a
+            href="{{ nav.href }}"
+            class="-mx-3 text-2xl/9 block rounded-lg px-3 py-2 font-semibold text-stone-100 hover:bg-stone-600"
+            >
+            {{ nav.text }}
+          </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  {% if heading %}
+    <div class="bg-stone-900 mt-22">
+      <div class="max-w-5xl mx-auto py-6 px-6 text-center">
+        <h2 class="text-3xl sm:text-3xl font-semibold tracking-tight text-pretty text-shadow-lg mb-1">
+          {{ heading }}
+        </h2>
+        <p class="text-lg italic leading-6 text-stone-400">
+          {{ subheading }}
+        </p>
+      </div>
+    </div>
+  {% endif %}
+  {% if wrap %}
+    <div class="p-6 min-h-100">
+      <div class="max-w-5xl mx-auto flex flex-col gap-6 items-start">
+        {{ content | safe }}
+      </div>
+    </div>
+  {% else %}
+    {{ content | safe }}
+  {% endif %}
+</main>
+
+<footer class="pt-20 p-6 text-sm text-center text-stone-400 flex flex-col gap-6 items-center justify-center">
+  <div>
+    <nav class="flex justify-center gap-6">
+      {%- for nav in navigation -%}
+        <a
+          href="{{ nav.href }}"
+          class="hover:text-stone-300 font-semibold"
+        >
+          {{ nav.text }}
+        </a>
+      {%- endfor -%}
+    </nav>
+  </div>
+  <div class="flex justify-center space-x-6">
+    {%- for social in socials -%}
+      {% if social.show %}
+        <a
+          href="{{ social.href }}"
+          class="text-stone-400 hover:text-stone-300 transition-colors duration-200"
+        >
+          <span class="sr-only">{{ social.name }}</span>
+          <span aria-hidden="true">{{ social.icon | safe }}</span>
+        </a>
+      {% endif %}
+    {%- endfor -%}
+  </div>
+  <div class="">&copy; 2025 {{ org.name }}. All rights reserved.</div>
+</footer>

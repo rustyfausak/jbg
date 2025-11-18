@@ -1,0 +1,15 @@
+---
+layout: basic.njk
+title: FAQ
+heading: Frequently Asked Questions
+subheading: Get to know more about our mission and how you can contribute.
+wrap: true
+---
+<ul class="flex flex-col gap-3">
+  {%- for item in faq -%}
+    <li>
+      <div class="font-semibold text-2xl">{{ item.question }}</div>
+      <div class="text-lg text-stone-300">{{ item.answer }}</div>
+    </li>
+  {%- endfor -%}
+</ul>

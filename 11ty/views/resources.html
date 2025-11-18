@@ -1,0 +1,25 @@
+---
+layout: basic.njk
+title: Resources
+heading: Resources
+subheading: Find helpful materials and support for brain injury recovery.
+wrap: true
+---
+{%- for resourcesOfType in resources -%}
+  <h3 class="text-3xl font-thin border-b border-stone-400 w-full text-stone-400">
+    {{ resourcesOfType.title }}
+  </h3>
+  <ul class="flex flex-col gap-3">
+    {%- for item in resourcesOfType.list -%}
+      <li>
+        <div class="font-semibold text-2xl">{{ item.name }}</div>
+        <div class="text-lg text-stone-300">
+          {% if item.link %}
+            <div><a class="underline text-stone-400" href="{{ item.link }}">{{ item.link }}</a></div>
+          {% endif %}
+          {{ item.details }}
+        </div>
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endfor -%}
