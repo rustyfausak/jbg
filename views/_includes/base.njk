@@ -3,24 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <link rel="canonical" href="https://brainshealtogether.com/" />
-    <link rel="stylesheet" href="/css/main.css">
-
-    <title>{{ title }}{% if not titleOverride %} - {{ org.name }}{% endif %}</title>
-
     <script type="text/javascript" src="/js/main.js"></script>
 
-    <meta name="title" content="{{ title }}" />
-    <meta name="description" content="Join our supportive community of brain injury survivors and their loved ones. Find peer support, resources, and hope on your healing journey. Connect with others who understand your experience." />
-    <meta name="keywords" content="brain injury, TBI, traumatic brain injury, peer support, brain injury survivors, healing community, support group, recovery, brain injury resources" />
-    <meta name="author" content="Brains Heal Together" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#042f2e" />
-    <meta name="msapplication-TileColor" content="#042f2e" />
-    <meta name="application-name" content="Brains Heal Together" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="canonical" href="{{ org.url }}{{ page.url or '/' }}" />
+    <link rel="stylesheet" href="/css/main.css">
+
+    {% if isHome %}
+      {% set myTitle = title %}
+      <script type="application/ld+json">
+      {
+        "@context" : "https://schema.org",
+        "@type" : "WebSite",
+        "name" : "{{ org.name }}",
+        "url" : "{{ org.url }}/"
+      }
+      </script>
+    {% else %}
+      {% set myTitle = title + " - " + org.name %}
+    {% endif %}
+    <title>{{ myTitle }}</title>
+
+    <meta name="title" content="{{ myTitle }}" />
+    <meta name="description" content="{{ metaDescription or 'Join our supportive community of brain injury survivors and their loved ones. Find peer support, resources, and hope on your healing journey.' }}" />
+    <meta name="keywords" content="{{ metaKeywords or 'brain injury, TBI, traumatic brain injury, peer support, brain injury survivors, healing community, support group, recovery, brain injury resources' }}" />
+    <meta name="author" content="{{ metaAuthor or org.name }}" />
+    <meta name="robots" content="{{ metaRobots or 'index, follow' }}" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ org.url }}{{ page.url or '/' }}" />
+    <meta property="og:title" content="{{ myTitle }}" />
+    <meta property="og:description" content="{{ metaDescription or 'Join our supportive community of brain injury survivors and their loved ones. Find peer support, resources, and hope on your healing journey.' }}" />
+    <meta property="og:image" content="{{ org.url }}{{ ogImage or '/img/social.png' }}" />
+    <meta property="og:site_name" content="{{ org.name }}" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="theme-color" content="#{{ org.colorHex }}" />
+    <meta name="msapplication-TileColor" content="#{{ org.colorHex }}" />
+    <meta name="application-name" content="{{ org.name }}" />
   </head>
   <body class="flex flex-col min-h-dvh bg-stone-800 text-stone-100 antialiased">
     {{ content | safe }}
